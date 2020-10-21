@@ -1,0 +1,216 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<meta name="description" content="Documentation for ">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.json" data-base=".">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="index.html" class="title"></a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+							<input type="checkbox" id="tsd-filter-only-exported" />
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="globals.html">Globals</a>
+				</li>
+			</ul>
+			<h1></h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div class="tsd-panel tsd-typography">
+				<a href="#manga-api" id="manga-api" style="color: inherit; text-decoration: none;">
+					<h1>Manga API</h1>
+				</a>
+				<p><a href="https://www.gnu.org/licenses/gpl-3.0"><img src="https://img.shields.io/badge/License-GPLv3-blue.svg" alt="License: GPL v3"></a>
+					<img src="https://github.com/antoniogamiz/manga-api/workflows/Documentation/badge.svg" alt="Documentation">
+				<img src="https://github.com/antoniogamiz/manga-api/workflows/Tests/badge.svg" alt="Tests CI"></p>
+				<a href="#descripción" id="descripción" style="color: inherit; text-decoration: none;">
+					<h2>Descripción</h2>
+				</a>
+				<p>Pequeña API para consultar información relativas a mangas tales como autores, género, capítulos y obtener enlaces a las correspondientes imágenes de cada capítulo. Este API pretende ser usada por aplicaciones móviles o páginas web para <em>leer</em> manga.</p>
+				<p>Para obtener la información de cada manga, dependemos de páginas externas como <a href="https://manganelo.com/">manganelo</a>. Cada página debe tener una implementación del <a href="https://github.com/antoniogamiz/manga-api/blob/master/src/types/parser.ts">parser</a> asociada. Por ahora, solo el <a href="https://github.com/antoniogamiz/manga-api/blob/master/src/parsers/manganelo.ts">parser de Manganelo</a> es completamente funcional. Los diferentes parsers son usados por la API cuando una nueva petición llega.</p>
+				<p>Para correr la aplicación:</p>
+				<pre><code>vr <span class="hljs-literal">start</span></code></pre>
+				<p>Para ejecutar los tests:</p>
+				<pre><code>vr <span class="hljs-built_in">test</span></code></pre>
+				<p>Para ejecutar el linter:</p>
+				<pre><code><span class="hljs-attribute">vr lint</span></code></pre>
+				<p>El módulo todavía no cuenta con un instalador, por lo que si quieres usar el proyecto tendrás que descargarte el repositorio con el siguiente comando:</p>
+				<pre><code>git clone https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/antoniogamiz/m</span>anga-api</code></pre>
+				<p>Nota: necesitas tener instalado <a href="https://github.com/umbopepato/velociraptor">velociraptor</a>.</p>
+				<a href="#documentación" id="documentación" style="color: inherit; text-decoration: none;">
+					<h2>Documentación</h2>
+				</a>
+				<ul>
+					<li><a href="https://antoniogamiz.github.io/manga-api/">GH Pages</a></li>
+					<li>Lenguaje: <a href="https://www.typescriptlang.org/">Typescript</a></li>
+					<li>Runtime: <a href="https://deno.land/">Deno</a></li>
+					<li><a href="/docs/plan.md">Plan de desarrollo</a></li>
+					<li><a href="/iv.yaml">iv.yaml</a></li>
+					<li>Principales tipos:<ul>
+							<li><a href="/src/types/manga.ts">Relacionados con manga</a></li>
+							<li><a href="/src/types/parser.ts">Relacionados con parsers</a></li>
+						</ul>
+					</li>
+				</ul>
+				<p>La documentación sigue el estándar <a href="https://github.com/microsoft/tsdoc">tsdoc</a> y es generada usando <a href="https://github.com/TypeStrong/typedoc">typedoc</a>.</p>
+				<p><em>NOTA</em>: Actualmente está rota porque TypeDoc tiene bastantes problemas con la forma de importar tipos de Deno. Estoy intentando solucionarlo o buscar una alternativa (hay pocas tirando a ninguna).</p>
+				<a href="#historias-de-usuario" id="historias-de-usuario" style="color: inherit; text-decoration: none;">
+					<h3>Historias de usuario:</h3>
+				</a>
+				<p>Los cambios aparecen descritos en el <a href="docs/CHANGELOG.md">CHANGELOG</a> del proyecto.</p>
+				<ul>
+					<li><input disabled="" type="checkbox"> <a href="https://github.com/antoniogamiz/manga-api/issues/9">HU1: Consultar mangas disponibles</a></li>
+					<li><input disabled="" type="checkbox"> <a href="https://github.com/antoniogamiz/manga-api/issues/10">HU2: Consultar manga específico</a></li>
+					<li><input disabled="" type="checkbox"> <a href="https://github.com/antoniogamiz/manga-api/issues/11">HU3: consultar manga por criterios</a></li>
+					<li><input disabled="" type="checkbox"> <a href="https://github.com/antoniogamiz/manga-api/issues/12">HU4: consultar capítulo de un manga</a></li>
+				</ul>
+				<a href="#enlaces-de-interés" id="enlaces-de-interés" style="color: inherit; text-decoration: none;">
+					<h3>Enlaces de interés</h3>
+				</a>
+				<ul>
+					<li><a href="/docs/herramientas.md">Justificación</a> de las herramientas usadas.</li>
+					<li><a href="/docs/git.md">Comprobación</a> de <code>git</code> configurado correctamente.</li>
+				</ul>
+				<a href="#autor" id="autor" style="color: inherit; text-decoration: none;">
+					<h2>Autor</h2>
+				</a>
+				<ul>
+					<li><a href="https://github.com/antoniogamiz">Antonio Gámiz Delgado</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="globals.html"><em>Globals</em></a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-enum">
+						<a href="enums/genre.html" class="tsd-kind-icon">Genre</a>
+					</li>
+					<li class=" tsd-kind-enum">
+						<a href="enums/status.html" class="tsd-kind-icon">Status</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/manganeloparser.html" class="tsd-kind-icon">Manganelo<wbr>Parser</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/parsingerror.html" class="tsd-kind-icon">Parsing<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/chapter.html" class="tsd-kind-icon">Chapter</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/chapterentry.html" class="tsd-kind-icon">Chapter<wbr>Entry</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/chapterpage.html" class="tsd-kind-icon">Chapter<wbr>Page</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/manga.html" class="tsd-kind-icon">Manga</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/mangaparser.html" class="tsd-kind-icon">Manga<wbr>Parser</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
+						<a href="globals.html#parsingresult" class="tsd-kind-icon">Parsing<wbr>Result</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#app" class="tsd-kind-icon">app</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#router" class="tsd-kind-icon">router</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#errormiddleware" class="tsd-kind-icon">error<wbr>Middleware</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#fetchpage" class="tsd-kind-icon">fetch<wbr>Page</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#getmanga" class="tsd-kind-icon">get<wbr>Manga</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
